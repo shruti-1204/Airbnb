@@ -70,10 +70,10 @@
     };
     
 
-    //Root route
-    // app.get("/", (req, res) => {
-    //     res.send("Hi! I am Shruti.");
-    // });
+    // Root route
+    app.get("/", (req, res) => {
+        res.redirect("/listings");
+    });
 
     app.use(session(sessionOption));
     app.use(flash());
