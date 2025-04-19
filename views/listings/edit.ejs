@@ -1,0 +1,48 @@
+<% layout("/layouts/boilerplate") %>
+<br>
+<div class="row ms-5">
+    <div class="col col-6 offset-2">
+        <h2>Edit a detail of <%= listing.title %></h2>
+        <br>
+        <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
+            <div class="mg-3">
+                <label class="form-label">Title</label>
+                <input name="title" value="<%= listing.title %>" type="text" class="form-control" required>
+                <div class="valid-feedback">Title looks good </div>
+            </div>
+            <br>
+            <div class="mg-3">
+                <label class="form-label">Description</label>
+                <textarea name="description" class="form-control"><%= listing.description %></textarea>
+            </div>
+            <br>
+            <div class="mg-3">
+                <label class="form-label">Image URL</label>
+                <input name="image[url]" value="<%= listing.image ? listing.image.url : '' %>" type="text" class="form-control" required>
+                <div class="invalid-feedback">Enter the correct Image url</div>
+
+            </div>
+            <br>
+            <!-- Row for Price and Country -->
+            <div class="row">
+                <!-- Price -->
+                <div class="mg-3 col-md-4">
+                    <label class="form-label">Price</label>
+                    <input name="price" value="<%= listing.price %>" type="text" class="form-control">
+                </div>
+                <!-- Country -->
+                <div class="mg-3 col-md-4">
+                    <label class="form-label">Country</label>
+                    <input name="location" value="<%= listing.location %>" type="text" class="form-control">
+                </div>
+            </div>
+            <br>
+            <div class="mg-3">
+                <label class="form-label">Location</label>
+                <input name="country" value="<%= listing.country %>" type="text" class="form-control">
+            </div>
+            <br><br>
+            <button class="btn btn-dark edit-btn  mt-3">Edit</button>
+        </form>
+    </div>
+</div>

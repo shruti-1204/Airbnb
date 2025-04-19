@@ -1,0 +1,56 @@
+/* Footer styling*/
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make sure main content grows and footer stays at the bottom */
+body > .container {
+    flex: 1;
+}
+
+/* This is your page wrapper that holds all content except footer */
+.page-wrapper {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    background-color: #ebebeb;
+    height: 8rem;
+    text-align: center;
+    padding: 1rem;
+}
+.f_link a{
+    text-decoration: none;
+    color: #222222;
+}
+.f_link a:hover {
+    color: #222222;
+}
+.f_link, .f_info_social , .f_info_brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+.f_info_social i{
+    font-size: 1.2rem;
+    margin-right: 1rem;
+}
+ .f_info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    align-items: center; /* Align items properly */
+    padding: 1rem; /* Optional for better spacing */
+ }
